@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - Epsilon Travel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <header class="main-header">
+         <div class="header-container">
+            <a href="index.php" class="header-left">
+                <div class="logo-container">
+                    <img src="https://via.placeholder.com/200x80/00a1ff/ffffff?text=EPSILON" alt="Epsilon" class="logo">
+                </div>
+            </a>
+            <div class="header-center">
+                <h1 class="main-title gradient-text">MI PERFIL</h1>
+            </div>
+            <div class="header-right" id="user-profile-area">
+                </div>
+        </div>
+    </header>
+
+    <main class="profile-section">
+        <div class="profile-container fade-in">
+            <div class="profile-header">
+                <div class="profile-image-wrapper">
+                    <img src="img/profiles/default.png" alt="Imagen de Perfil" id="profile-image-display">
+                </div>
+                <h2 id="profile-username">Cargando...</h2>
+                <p id="profile-email">Cargando...</p>
+            </div>
+            
+            <div class="profile-content">
+                <h3>Actualizar foto de perfil</h3>
+                <form id="profile-update-form" enctype="multipart/form-data">
+                    <div class="form-message" id="form-message"></div>
+                    
+                    <div class="file-input">
+                        <input type="file" id="profileImage" name="profileImage" accept="image/*" style="display: none;">
+                        <label for="profileImage" class="file-label">
+                            <i class="fas fa-camera"></i>
+                            <span id="file-name">Seleccionar imagen...</span>
+                        </label>
+                        <div class="file-hint">Formatos aceptados: JPG, PNG, GIF (Máx. 2MB)</div>
+                    </div>
+                    
+                    <button type="submit" class="primary-btn form-btn" style="margin-top: 20px;">
+                        <i class="fas fa-save"></i> Guardar Cambios
+                    </button>
+                </form>
+            </div>
+
+            <div class="profile-footer">
+                <a href="php/logout.php" class="secondary-btn">Cerrar Sesión</a>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>
